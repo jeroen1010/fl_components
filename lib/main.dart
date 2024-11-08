@@ -1,3 +1,4 @@
+import 'package:fl_components/routes/app_routes.dart';
 import 'package:fl_components/screens/screens.dart';
 import 'package:flutter/material.dart';
 
@@ -9,16 +10,16 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
+      debugShowCheckedModeBanner: false, //Para quitar la etiqueta fea esa debug de la esquina superior derecha
       title: 'Material App',
       //home: const Listview2Screen(),
-      initialRoute: 'home',
-      routes: {
-        'listview1': (BuildContext context) => const Listview1Screen(),
-        'listview2': (BuildContext context) => const Listview2Screen(),
-        'alert': (BuildContext context) => const AlertScreen(),
-        'card': (BuildContext context) => const CardScreen(),
-        'home': (BuildContext context) => const HomeScreen(),
+      initialRoute: AppRoutes.initialRoute,
+      routes: AppRoutes.routes,
+      //Para evitar que se muestren errores al usaurio cuando la ruta no existe
+      onGenerateRoute: (settings) {
+        return MaterialPageRoute(
+          builder: (context) => const AlertScreen()
+        );
       },
     );
   }

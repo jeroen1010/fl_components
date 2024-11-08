@@ -2,22 +2,25 @@ import 'package:flutter/material.dart';
 
 class Listview1Screen extends StatelessWidget {
 
-  final options = const['Targaryen', 'Stark', 'Lanister', 'Baratheon'];
+  final options = const['Targaryen', 'Stark', 'Lannister', 'Baratheon'];
    
   const Listview1Screen({Key? key}) : super(key: key);
   
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
+    return Scaffold(
       appBar: AppBar(
-        title: const Text('ListView tipo 1'),
+        title: const Text('Listview Tipo 1'),
       ),
       body: ListView(
         children: [
-          ...options.map((e) => ListTile(
-            trailing: Icon(Icons.arrow_forward_ios_outlined),
-            title:Text(e),
-          )).toList()
+          ...options.map((e) => 
+            ListTile(
+              trailing: Icon( Icons.arrow_forward_ios_outlined),
+              title: Text(e),
+            ),
+          ).toList()
+
         ],
       )
     );
