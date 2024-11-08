@@ -10,17 +10,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false, //Para quitar la etiqueta fea esa debug de la esquina superior derecha
+      debugShowCheckedModeBanner: false,
       title: 'Material App',
       //home: const Listview2Screen(),
       initialRoute: AppRoutes.initialRoute,
-      routes: AppRoutes.routes,
-      //Para evitar que se muestren errores al usaurio cuando la ruta no existe
-      onGenerateRoute: (settings) {
-        return MaterialPageRoute(
-          builder: (context) => const AlertScreen()
-        );
-      },
+      routes: AppRoutes.getAppRoutes(),
+      onGenerateRoute: AppRoutes.onGenerateRoute,
     );
   }
 }
