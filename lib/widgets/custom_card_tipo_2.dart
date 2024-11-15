@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
 class CustomCardTipo2 extends StatelessWidget {
-  const CustomCardTipo2({super.key});
+  final String imageUrl;
+  final String? nombre;
+  const CustomCardTipo2({super.key, required this.imageUrl, this.nombre});
 
   @override
   Widget build(BuildContext context) {
@@ -12,18 +14,21 @@ class CustomCardTipo2 extends StatelessWidget {
       ),
       child: Column(
         children: [
-          const FadeInImage(
-            image: NetworkImage('https://wallpapercat.com/w/full/a/2/9/76539-2560x1442-desktop-hd-anuel-aa-background-image.jpg'),
+          FadeInImage(
+            //image: NetworkImage('https://wallpapercat.com/w/full/a/2/9/76539-2560x1442-desktop-hd-anuel-aa-background-image.jpg'),
+            image: NetworkImage( imageUrl ),
             placeholder: AssetImage('assets/jar-loading.gif'),
             width: double.infinity,
             height: 200,
             //fit: BoxFit.cover, //Se adapta a todo el tamaño de widget
             fadeInDuration: Duration(milliseconds: 3000),
           ),
+
+          if(nombre != null)
           Container(
             alignment: AlignmentDirectional.centerEnd,
             padding: const EdgeInsets.only(top:10, bottom: 10, right: 20),
-            child: const Text('Anuel AA')
+            child: Text(nombre ?? 'desconocido')
           )
         ]
       )
