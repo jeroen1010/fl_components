@@ -23,7 +23,11 @@ class Listview2Screen extends StatelessWidget {
             ), 
         separatorBuilder:(context, index) => const Divider(), 
         itemCount: options.length
-      )
+      ),
+      floatingActionButton: FloatingActionButton(
+        child: const Icon(Icons.close),
+        onPressed: () => Navigator.pop(context),
+      ),
     );
   }
 }

@@ -25,7 +25,7 @@ class Listview1Screen extends StatelessWidget {
       ),
       floatingActionButton: FloatingActionButton(
         child: const Icon(Icons.close),
-        onPressed: () => Navigator.pop(context)
+        onPressed: () => Navigator.pop(context),
       ),
     );
   }
