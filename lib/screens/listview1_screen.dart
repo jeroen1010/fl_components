@@ -22,7 +22,11 @@ class Listview1Screen extends StatelessWidget {
           ).toList()
 
         ],
-      )
+      ),
+      floatingActionButton: FloatingActionButton(
+        child: const Icon(Icons.close),
+        onPressed: () => Navigator.pop(context)
+      ),
     );
   }
 }
