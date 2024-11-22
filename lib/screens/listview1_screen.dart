@@ -12,22 +12,22 @@ class Listview1Screen extends StatelessWidget {
     {
       'name': 'Casa Targaryen',
       'description': 'Los Targaryen son de sangre valyria y antiguos reyes. Su lema es "Fuego y Sangre".',
-      'imageUrl': 'https://example.com/targaryen.jpg',
+      'imageUrl': 'https://static.wikia.nocookie.net/hieloyfuego/images/4/4d/Casa_Targaryen_estandarte.png/revision/latest?cb=20161230200319',
     },
     {
       'name': 'Casa Stark',
       'description': 'Los Stark son la principal familia del Norte. Su lema es "Se acerca el invierno".',
-      'imageUrl': 'https://example.com/stark.jpg',
+      'imageUrl': 'https://static.wikia.nocookie.net/hieloyfuego/images/3/32/Casa_Stark_escudo.png/revision/latest?cb=20240922215518',
     },
     {
       'name': 'Casa Lannister',
       'description': 'Los Lannister son conocidos por su riqueza y poder. Su lema es "Oye mi rugido".',
-      'imageUrl': 'https://example.com/lannister.jpg',
+      'imageUrl': 'https://static.wikia.nocookie.net/hieloyfuego/images/6/66/Casa_Lannister_escudo.png/revision/latest?cb=20161230202341',
     },
     {
       'name': 'Casa Baratheon',
       'description': 'Los Baratheon son una de las Grandes Casas. Su lema es "Nuestra es la furia".',
-      'imageUrl': 'https://example.com/baratheon.jpg',
+      'imageUrl': 'https://static.wikia.nocookie.net/hieloyfuego/images/1/13/Casa_Baratheon_estandarte.png/revision/latest?cb=20161230200810',
     },
   ];
 
