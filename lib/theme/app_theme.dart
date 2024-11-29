@@ -24,6 +24,17 @@ class AppTheme {
         floatingActionButtonTheme: const FloatingActionButtonThemeData(
           backgroundColor: primary,
           elevation: 5
+        ),
+        //InputDecoration
+        inputDecorationTheme: InputDecorationTheme(
+          floatingLabelStyle: TextStyle(color: primary),
+          enabledBorder: OutlineInputBorder(
+            borderSide: BorderSide(color: primary),
+            borderRadius: BorderRadius.circular(10)
+          ), 
+          focusedBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(10)
+          )
         )
   );
 }
