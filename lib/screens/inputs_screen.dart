@@ -29,34 +29,42 @@ class InputsScreen extends StatelessWidget {
           key: myFormKey,
            child: Column(
             children: [
-              const CustomTextFormField(
+              CustomTextFormField(
                 hintText: 'Nombre',
                 labelText: 'Nombre',
                 helperText: 'Solo letras',
                 suffixIcon: Icons.person_2_rounded, 
-                obscureText: false,
+                obscureText: false, 
+                formProperty: 'nombre', 
+                formValues: formValues,
               ),
               const SizedBox(height: 30),
-              const CustomTextFormField(
+              CustomTextFormField(
                 hintText: 'Apellidos',
                 labelText: 'Apellidos del usuario',
                 suffixIcon: Icons.person_4_rounded, 
                 obscureText: false,
+                formProperty: 'apellidos', 
+                formValues: formValues,
               ),
               const SizedBox(height: 30),
-              const CustomTextFormField(
+              CustomTextFormField(
                 hintText: 'E-Mail',
                 labelText: 'E-Mail del usuario',
                 suffixIcon: Icons.email_rounded,
                 keyboardType: TextInputType.emailAddress, 
                 obscureText: false,
+                formProperty: 'email', 
+                formValues: formValues,
               ),
               const SizedBox(height: 30),
-              const CustomTextFormField(
+              CustomTextFormField(
                 hintText: 'Contraseña',
                 labelText: 'Contraseña del usuario',
                 suffixIcon: Icons.email_rounded, 
                 obscureText: true,
+                formProperty: 'password', 
+                formValues: formValues,
               ),
               const SizedBox(height: 30),
               ElevatedButton(
